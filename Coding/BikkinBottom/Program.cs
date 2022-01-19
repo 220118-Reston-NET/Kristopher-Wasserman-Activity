@@ -6,14 +6,14 @@ Console.WriteLine("Hello");
 Console.WriteLine("My name is Eugne Krabs");
 Console.WriteLine("What is yee name?");
 string name = Console.ReadLine();
-Console.WriteLine($"{name}, Welcome to Bikkin Bottom!");
+Console.WriteLine($"{name}, Welcome to Bikkin Bottom");
 
 
 string repeat = "true";
 do
 {
     Console.WriteLine("What would yee like to do while in Bikkin Bottom?");
-    Console.WriteLine("[1] Go see Sandy at her Tree Dome");
+    Console.WriteLine("[1] Go see Sandy at her Tree Dome.");
     Console.WriteLine("[2] Throw eggs at Squidward's house");
     Console.WriteLine("[3] Visit Spongbob");
     Console.WriteLine("[4] Talk to Patrick(not like he will understand)");
