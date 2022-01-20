@@ -28,8 +28,7 @@ namespace menu
                 Console.WriteLine("[4] Talk to Patrick(not like he will understand)");
                 Console.WriteLine("[5] Hangout at the Krusty Karbs");
                 Console.WriteLine("[6] Visit the atm");
-                Console.WriteLine("[7] See Balance");
-                Console.WriteLine("[6] All done visiting Bikkin Bottom");
+                Console.WriteLine("[7] All done visiting Bikkin Bottom");
                 string? ans = Console.ReadLine();
                
                 if(ans == "1")

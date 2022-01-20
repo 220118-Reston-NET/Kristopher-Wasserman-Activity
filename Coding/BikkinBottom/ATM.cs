@@ -5,80 +5,106 @@ namespace Data;
     {
 
         private List<int> _money = new List<int>();
-        int cash = _money;
+            
         bool repeat = true;
         public void Atm()
         {
-            // while(repeat == true)
-            // {
-            Console.WriteLine("===ATM Menu===");
-            Console.WriteLine("[1] Add money to Account"); // Adds money to account
-            Console.WriteLine("[2] View Balance");
-            Console.WriteLine("[3] Search Account");
-            Console.WriteLine("[4] Get Money");
-            Console.WriteLine("[6] Back to Main Game!");
-            string? ans = Console.ReadLine();
+            while(repeat)
+             {
+                Console.WriteLine("===ATM Menu===");
+                Console.WriteLine("[1] Add money to Account"); // Adds money to account
+                Console.WriteLine("[2] View Balance");
+                Console.WriteLine("[3] Search Account");
+                Console.WriteLine("[4] Get Money");
+                Console.WriteLine("[6] Back to Main Game!");
+                string? ans = Console.ReadLine();
+                
+                
+                if(ans == "1")
+                {
+                    AddMoney();
+                }
 
-            if(ans == "1")
-            {
-                AddMoney();
+                else if (ans == "2")
+                {
+                    Balance();
+                }
+
+                else if(ans == "3")
+                {
+                    
+                    SearchMoney();
+                }
+
+                else if(ans =="4")
+                {
+                    RemoveMoney();
+                }
+                else if(ans == "6")
+                {
+                    repeat = false;
+                }
             }
-            else if (ans == "2")
-            {
-                Balance();
-            }
-            else if(ans == "3")
-            {
-                SearchMoney();
-            }
-            else if(ans =="4")
-            {
-                RemoveMoney();
-            }
-            else if(ans == "6")
-            {
-                Visiting menu = new Visiting();
-                menu.Main();
-            }
-            //  repeat = false;
-            // }
         }
         //This function is used to Add indxes to the Generic Collection
         public void AddMoney()
             {
-                Console.WriteLine("You added $10 Dollars to your account");
-                _money.Add(10);
+                int amount;
+                Console.WriteLine("How much would you like to add?");
+                amount = Convert.ToInt32(Console.ReadLine());
+                _money.Add(amount);
+                Console.WriteLine("Money Added!");
+                Console.ReadLine();
             }
         
         //This function is used to search the Generic Collection
         public void SearchMoney() 
             {
-                if(_money == )
+                int amount;
+                Console.WriteLine("What are ammount are you looking for?");
+                amount = Convert.ToInt32(Console.ReadLine());
+
+                foreach(int i in _money)
+                {
+                    if( amount == i )
+                    {
+                        Console.WriteLine(i);
+                    }
+                    else
+                    {
+                        Console.WriteLine("You Have nothing in your account!");
+                    }
+                }
+            
             }
         
         // This function is to view what is inside of the Generic Collection type and sum the indexs together 
         public void Balance() 
             {
                 
-                    Console.WriteLine("===Balance Inqury");
+                    Console.WriteLine("===Balance Inqury===");
+                    int sum = 0;
                     foreach(int cash in _money)
                     {
                         
-                        Console.WriteLine(cash);    
+                        Console.WriteLine(cash);
+                        sum = cash + sum;    
                     }
-                    int sum;
-                    sum = _money[0] + _money[1] + _money[2] + _money[3];
-                    Console.WriteLine("Total Balance: "+ sum);
+                    //int sum = _money[0] + _money[1] + _money[2];
+                    Console.WriteLine("Total Balance: $"+ sum);
                     Console.WriteLine("===End Balance===");
-   
+            
             }
 
         //This function is to remove an entry form a Generic Collection
         public void RemoveMoney() 
             {
-                cash = _money;
-                Console.WriteLine("You took $10 from your bank account");
-                _money.Remove();
+                Console.WriteLine("How much would you like to withdraw?");
+
+                int amount = Convert.ToInt32(Console.ReadLine());
+                _money.Remove(amount);
+                Console.WriteLine($"You took {amount} from your bank account");
+                
             }
 
     } 
