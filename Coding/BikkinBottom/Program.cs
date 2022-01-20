@@ -5,7 +5,7 @@ string again;
 Console.WriteLine("Hello");
 Console.WriteLine("My name is Eugne Krabs");
 Console.WriteLine("What is yee name?");
-string name = Console.ReadLine();
+string ? name = Console.ReadLine();
 Console.WriteLine($"{name}, Welcome to Bikkin Bottom");
 
 
@@ -19,13 +19,13 @@ do
     Console.WriteLine("[4] Talk to Patrick(not like he will understand)");
     Console.WriteLine("[5] Hangout at the Krusty Karbs");
     Console.WriteLine("[6] All done visiting Bikkin Bottom");
-    string ans = Console.ReadLine();
+    string? ans = Console.ReadLine();
 
     if(ans == "1")
     {
         Console.WriteLine("You went to see Sandy at her home. She was happy to see you");
         Console.WriteLine("Choose Again!");
-        again  = Console.ReadLine();
+        again = Console.ReadLine();
     }
     else if(ans == "2")
     {
