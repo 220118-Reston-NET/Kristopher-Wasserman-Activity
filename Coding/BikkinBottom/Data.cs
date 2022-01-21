@@ -62,10 +62,10 @@ namespace menu
                     Console.WriteLine("Choose Again!");
                     again = Console.ReadLine();
                 }
-                else if (ans == "6")
-                {
-                    atmMenu.Atm();
-                }
+                // else if (ans == "6")
+                // {
+                //     atmMenu.Atm();
+                // }
                 else if (ans == "7")
                 {
                     Console.WriteLine($"Do you have to leave so soon, Owell {name} come back soon and Thank you for visiting Bikkin Bottom!");
